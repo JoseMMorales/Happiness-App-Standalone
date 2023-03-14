@@ -9,29 +9,35 @@
     [dataSource]="dataSource"
     matSort
     (matSortChange)="announceSortChange($event)"
+    cdkDropList
+    (cdkDropListDropped)="drop($event)"
   >
     <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag>ID</th>
       <td mat-cell *matCellDef="let row">{{ row.id }}</td>
     </ng-container>
 
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>NAME</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag>NAME</th>
       <td mat-cell *matCellDef="let row">{{ row.name }}%</td>
     </ng-container>
 
     <ng-container matColumnDef="category">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>CATEGORY</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag>
+        CATEGORY
+      </th>
       <td mat-cell *matCellDef="let row">{{ row.category }}</td>
     </ng-container>
 
     <ng-container matColumnDef="company">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>COMPANY</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag>COMPANY</th>
       <td mat-cell *matCellDef="let row">{{ row.company }}</td>
     </ng-container>
 
     <ng-container matColumnDef="happiness">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>HAPPINESS</th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag>
+        HAPPINESS
+      </th>
       <td mat-cell *matCellDef="let row">{{ row.levelOfHappiness }}</td>
     </ng-container>
 

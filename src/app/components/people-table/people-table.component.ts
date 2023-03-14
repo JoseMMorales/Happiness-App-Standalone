@@ -9,8 +9,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatSortModule } from '@angular/material/sort';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
-import { People } from 'src/app/data';
+import { People, DisplayedColumns } from 'src/app/data';
 import { Person } from 'src/app/models';
 
 @Component({
@@ -23,19 +25,14 @@ import { Person } from 'src/app/models';
     MatTableModule,
     MatInputModule,
     MatSortModule,
+    DragDropModule,
   ],
   templateUrl: './people-table.component.html',
   styleUrls: ['./people-table.component.scss'],
 })
 export class PeopleTableComponent implements AfterViewInit {
-  displayedColumns: string[] = [
-    'id',
-    'name',
-    'category',
-    'company',
-    'happiness',
-  ];
   dataSource: MatTableDataSource<Person>;
+  displayedColumns: string[] = [];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) set matSort(sort: MatSort) {
@@ -43,6 +40,7 @@ export class PeopleTableComponent implements AfterViewInit {
   }
 
   constructor(private _liveAnnouncer: LiveAnnouncer) {
+    this.displayedColumns = DisplayedColumns;
     this.dataSource = new MatTableDataSource(People);
   }
 
@@ -66,5 +64,13 @@ export class PeopleTableComponent implements AfterViewInit {
     } else {
       this._liveAnnouncer.announce('Sorting cleared');
     }
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(
+      this.displayedColumns,
+      event.previousIndex,
+      event.currentIndex
+    );
   }
 }
