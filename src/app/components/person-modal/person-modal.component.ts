@@ -50,7 +50,7 @@ export class PersonModalComponent implements OnInit {
         name: ['', Validators.required],
         category: ['', Validators.required],
         company: ['', Validators.required],
-        happiness: ['', Validators.required],
+        levelOfHappiness: ['', Validators.required],
       });
     }
   }

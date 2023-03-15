@@ -19,12 +19,17 @@
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Happiness</mat-label>
-        <input matInput formControlName="happiness" />
+        <input matInput formControlName="levelOfHappiness" />
       </mat-form-field>
     </form>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button (click)="closeDialog()" color="accent">
+    <button
+      [disabled]="form.invalid"
+      mat-raised-button
+      (click)="closeDialog()"
+      color="accent"
+    >
       Add
     </button>
   </mat-card-actions>
