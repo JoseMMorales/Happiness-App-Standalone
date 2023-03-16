@@ -3,7 +3,7 @@ import { Person } from '../models';
 export const People: Person[] = [
   {
     id: '1',
-    name: 'Alan Bello',
+    name: 'Manuel Bello',
     category: 'manager',
     company: 'Planet of the Grapes',
     levelOfHappiness: '30',

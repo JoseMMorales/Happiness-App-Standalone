@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="422" alt="standalone" src="https://user-images.githubusercontent.com/43299285/225273579-dd6cd13e-0361-4a4f-8d87-a95ac84866d1.PNG">
+  <img width="522" alt="standalone" src="https://user-images.githubusercontent.com/43299285/225273579-dd6cd13e-0361-4a4f-8d87-a95ac84866d1.PNG">
   
   ## **Angular Happiness - Standalone Components**
 </div>

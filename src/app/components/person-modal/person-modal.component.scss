@@ -1,5 +1,9 @@
-.modal-card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card {
+  box-shadow: none;
+
+  .modal-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
