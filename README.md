@@ -4,15 +4,15 @@
   ## **Angular Happiness - Standalone Components**
 </div>
 
-Happiness App is a Standalone Component based structure which will be able to show how to simplify the way of building Angular Apps. As these brand-new components are not part of any ng-module, all dependencies should be injected based on components' requirements directly onto them. Besides, we will be skyping any shared module in order to re-use our components, being barrels the strategy present when selecting a component and centralizing exports if at any point several modules come up.
+Happiness App is a Standalone Component based structure which will be able to show how to simplify the way of building Angular Apps. As these brand-new components are not part of any ng-module, all dependencies should be injected based on components' requirements directly onto them. Besides, we will be skyping any shared module in order to re-use our components, using barrels as a strategy when selecting a component and centralizing exports if at any point several modules come up.
 
-For giving high standard on designs, we've opted by choosing [Angular Material](https://material.angular.io/) for this project as it is very straight forward to use and consistent when develop any Angular Apps.
+To provide high standard designs, we've opted by choosing [Angular Material](https://material.angular.io/) for this project as it is very straight forward to use and consistent when develop any Angular Apps.
 
 </br>
 
 ### **Standalone property and imports...**
 
-**standalone: true** should be set up in any component to mark it as Standalone, as we mentioned above it will manage their own template dependencies via the import property
+**standalone: true** should be set up in any component to mark it as Standalone, as we mentioned above it will manage their own template dependencies using the import property
 
 <div align="center">
 <img width="380" alt="import" src="https://user-images.githubusercontent.com/43299285/225334068-f2ca4e05-a02e-4496-8e00-cbcdbcd46a84.PNG">
@@ -22,7 +22,7 @@ For giving high standard on designs, we've opted by choosing [Angular Material](
 
 ### **Snapshots...**
 
-- Landing/Home page rendering whole data list of happy people, here we will see an icon in the toolbar where user can enter details of happiness to update the table.
+- Landing/Home page rendering the list of happy people, here we will see an icon in the toolbar where the user can enter details of happiness to update the table.
 
 <div align="center">
   <img width="606" alt="Table" src="https://user-images.githubusercontent.com/43299285/225278880-fbe5aa3e-3f88-4172-9ed0-5eec99b5930d.PNG">
@@ -30,7 +30,7 @@ For giving high standard on designs, we've opted by choosing [Angular Material](
 
 </br>
 
-- Dialog Box is popping up when user makes click in the icon reflected in the snapshot above. Same fields will be rendered in both components(table/dialog).
+- Dialog Box is popping up when user clicks on the icon reflected in the snapshot above. Same fields will be rendered in both components(table/dialog).
 
 <div align="center">
     <img width="612" alt="pop-up" src="https://user-images.githubusercontent.com/43299285/225279095-f32b0b1f-d701-4add-8b49-de9ee5954ebe.PNG">
@@ -40,7 +40,14 @@ For giving high standard on designs, we've opted by choosing [Angular Material](
 
 ### **Angular Material presence...**
 
-`<mat-toolbar>` component to set a title in the App and happy icon, `<mat-icon>` as part of the clickable button which will open the Dialog box when a user wants to add his/her data in happiness table, `MatDialog` component to render a pop-up box when user clicks heart icon in the toolbar, `<table mat-table>` component to render/filter/sort happy people in the home view, `<mat-paginator>` to retrieve just data accordingly that is set up in the bottom side of the table, `<mat-card>` component to organize person form fields when Dialog box is shown, `<mat-spinner>` to let the user know about any action in the backend.
+- `<mat-toolbar>` it's a component to set a title in the App and happy icon.
+- `<mat-icon>` The user will open the Dialog box to add his/her data on the happiness table.
+- `MatDialog` It's a component to render a pop-up box when user clicks heart icon in the toolbar.
+- `<table mat-table>` Used to render/filter/sort happy people in the home view.
+- `<mat-paginator>` It's retrieving just the data that is set up in the bottom side of the table.
+
+* `<mat-card>` It's a component to organize person form fields when Dialog box is shown up.
+* `<mat-spinner>` It's letting the user know about any action in the backend.
 
 </br>
 
